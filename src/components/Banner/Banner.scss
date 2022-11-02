@@ -1,0 +1,107 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+.banner {
+    position: relative;
+    width: 100%;
+    padding: 0rem 2rem 0rem 2rem;
+    .content {
+        position: relative;
+        z-index: 99;
+
+        h1 {
+            font-size: 3.9rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-color);
+            font-weight: normal;
+            span {
+                font-size: 2rem;
+                @include breakpoint(lg) {
+                    font-size: 1.4rem;
+                }
+                @include breakpoint(sm) {
+                    font-size: 1rem;
+                }
+            }
+            @media screen and (max-width: 1440px) {
+                font-size: 3.7rem;
+            }
+            @include breakpoint(xl) {
+                font-size: 3rem;
+            }
+            @include breakpoint(lg) {
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+            @include breakpoint(sm) {
+                font-size: 1.4rem;
+            }
+        }
+        .text {
+            p {
+                font-size: 1.3331rem;
+                display: block;
+                margin-bottom: 3rem;
+                max-width: 70rem;
+                color: var(--text-color);
+                font-weight: normal;
+                @include breakpoint(xl) {
+                    font-size: 1rem;
+                }
+                @include breakpoint(sm) {
+                    font-size: 0.9rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .img-content {
+            position: relative;
+            z-index: 99;
+            &::before {
+                content: "";
+                background: url(../../../public/image/layer.png) no-repeat top;
+                height: 51%;
+                width: 97%;
+                position: absolute;
+                top: -7rem;
+                right: -2.5rem;
+                background-size: contain;
+                background-position: right top;
+                /* @media screen and (max-width: 1440px) {
+                    right: 3rem;
+                } */
+                @include breakpoint(xl) {
+                    display: none;
+                }
+            }
+            &::after {
+                content: "";
+                background: url(../../../public/image/layer2.png) no-repeat;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                bottom: -12.5rem;
+                left: -4rem;
+                background-size: contain;
+                background-position: left bottom;
+                /* @media screen and (max-width: 1440px) {
+                    left: 1.5rem;
+                } */
+                @include breakpoint(xl) {
+                    display: none;
+                }
+            }
+            .img-wrapper {
+                .banner-img {
+                  /*   max-width: 72rem;
+                    @media screen and (max-width: 1440px) {
+                        max-width: 70rem;
+                    }
+                    @include breakpoint(xl) {
+                        max-width: 100%;
+                    } */
+                }
+            }
+        }
+    }
+}
