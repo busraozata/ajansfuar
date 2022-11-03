@@ -2,13 +2,15 @@ import React from 'react'
 import "./Banner.scss"
 import dummyBanner from '../../API/dummyBanner'
 export default function Banner() {
+    const text = dummyBanner.title.replace('ve', '<span>ve</span>').replace(';;', '<strong>world</strong>')
+
     return (
         <section className='banner'>
             <div className="container">
                 <div className="content">
                     <div className="title">
-                        <h1>{dummyBanner.title}</h1>
-                        {/* <h1>Fuar Etkinlik Fotoğraf Çekimi <span>ve</span> Tanıtım Filmi </h1> */}
+                        <h1 dangerouslySetInnerHTML={{ __html: text }} />
+
                         <div className="text w-100 d-flex justify-content-center">
                             <p className='text-center'> {dummyBanner.text} </p>
                         </div>
