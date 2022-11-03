@@ -109,6 +109,9 @@
                     margin-top: 4rem;
                     padding: 0rem 6rem;
                     position: relative;
+                    @include breakpoint(sm){
+                        padding: 0rem 2.5rem;
+                    }
                     &::before {
                         content: "";
                         background: url(../../../public/image/shape.png) no-repeat top;
