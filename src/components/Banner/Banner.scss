@@ -3,7 +3,10 @@
 .banner {
     position: relative;
     width: 100%;
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 0rem 2rem;
+    @include breakpoint(lg) {
+        padding: 1rem 1rem;
+    }
     .content {
         position: relative;
         z-index: 99;
@@ -24,17 +27,17 @@
                 }
             }
             @media screen and (max-width: 1440px) {
-                font-size: 3.7rem;
+                font-size: 3.8rem;
             }
             @include breakpoint(xl) {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
             @include breakpoint(lg) {
                 margin-bottom: 2rem;
                 font-size: 2rem;
             }
             @include breakpoint(sm) {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
             }
         }
         .text {
@@ -47,6 +50,7 @@
                 font-weight: normal;
                 @include breakpoint(xl) {
                     font-size: 1rem;
+                    max-width: 50rem !important;
                 }
                 @include breakpoint(sm) {
                     font-size: 0.9rem;
@@ -55,51 +59,47 @@
             }
         }
         .img-content {
-            position: relative;
-            z-index: 99;
-            &::before {
-                content: "";
-                background: url(../../../public/image/layer.png) no-repeat top;
-                height: 51%;
-                width: 97%;
-                position: absolute;
-                top: -7rem;
-                right: -2.5rem;
-                background-size: contain;
-                background-position: right top;
-                /* @media screen and (max-width: 1440px) {
-                    right: 3rem;
-                } */
-                @include breakpoint(xl) {
-                    display: none;
-                }
-            }
-            &::after {
-                content: "";
-                background: url(../../../public/image/layer2.png) no-repeat;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                bottom: -12.5rem;
-                left: -4rem;
-                background-size: contain;
-                background-position: left bottom;
-                /* @media screen and (max-width: 1440px) {
-                    left: 1.5rem;
-                } */
-                @include breakpoint(xl) {
-                    display: none;
-                }
-            }
             .img-wrapper {
-                .banner-img {
-                  /*   max-width: 72rem;
-                    @media screen and (max-width: 1440px) {
-                        max-width: 70rem;
-                    }
+                max-width: 75rem;
+                position: relative;
+                z-index: 99;
+                &::before {
+                    content: "";
+                    background: url(../../../public/image/layer.png) no-repeat top;
+                    height: 51%;
+                    width: 97%;
+                    position: absolute;
+                    top: -7rem;
+                    right: -2.5rem;
+                    background-size: contain;
+                    background-position: right top;
+                    z-index: -1;
                     @include breakpoint(xl) {
-                        max-width: 100%;
-                    } */
+                        top: -5rem;
+                        right: -2rem;
+                    }
+                    @include breakpoint(lg) {
+                        display: none;
+                    }
+                }
+                &::after {
+                    content: "";
+                    background: url(../../../public/image/layer2.png) no-repeat;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    bottom: -12.5rem;
+                    left: -4rem;
+                    background-size: contain;
+                    background-position: left bottom;
+                    z-index: -1;
+                    @include breakpoint(xl) {
+                        left: -3rem;
+                        bottom: -9rem;
+                    }
+                    @include breakpoint(lg) {
+                        display: none;
+                    }
                 }
             }
         }

@@ -12,7 +12,7 @@ export default function Banner() {
                         <div className="text w-100 d-flex justify-content-center">
                             <p className='text-center'> {dummyBanner.text} </p>
                         </div>
-                        <div className="img-content">
+                        <div className="img-content w-100 d-flex justify-content-center">
                             <div className="img-wrapper w-100 d-flex justify-content-center">
                                 <img src={dummyBanner.image} className="img-fluid w-100 banner-img" alt="banner" />
                             </div>

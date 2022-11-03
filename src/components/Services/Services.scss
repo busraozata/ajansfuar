@@ -2,30 +2,40 @@
 @import "../../styles/mixin.scss";
 
 .services {
-    padding: 2rem 0rem;
+    padding: 5rem 2rem 2rem 2rem;
     position: relative;
     z-index: 9;
     min-height: 100vh;
     overflow: hidden;
-    .serviceList {
-        .serviceItem {
-            text-align: center;
-            position: relative;
-            padding: 4rem 0rem;
-
-            &:nth-child(2n + 0) .row {
-                flex-direction: row-reverse;
-            }
-        }
+    @include breakpoint(sm) {
+        padding: 0 1rem;
     }
 
-    .serviceContent {
+    .service-content {
+        @include breakpoint(xl) {
+            display: inline !important;
+        }
+
         h4 {
             font-size: 3.9319rem;
             color: var(--text-color);
             font-weight: normal;
             text-align: center;
             margin-bottom: 3rem;
+            @media screen and (max-width: 1440px) {
+                font-size: 3.8rem;
+            }
+            @include breakpoint(xl) {
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+            }
+            @include breakpoint(lg) {
+                font-size: 2rem;
+                margin-top: 2rem;
+            }
+            @include breakpoint(sm) {
+                font-size: 1.4rem;
+            }
         }
         p {
             font-size: 1.0831rem;
@@ -33,6 +43,12 @@
             font-weight: normal;
             text-align: center;
             max-width: 36rem;
+            @include breakpoint(xl) {
+                font-size: 1rem;
+            }
+            @include breakpoint(sm) {
+                font-size: 0.9rem;
+            }
         }
         .list {
             display: flex;
@@ -40,6 +56,10 @@
             width: 100%;
             justify-content: center;
             margin: 2rem 0 3.5rem 0rem;
+            @include breakpoint(sm) {
+                margin-left: 2rem;
+                margin-top: 1rem;
+            }
             ul {
                 text-align: left;
                 li {
@@ -47,22 +67,74 @@
                     color: var(--text-color);
                     font-weight: 300;
                     font-size: 1rem;
+                    @include breakpoint(sm) {
+                        font-size: 0.9rem;
+                    }
                 }
             }
         }
-    }
+        .serviceList {
+            max-width: 75rem;
+            .serviceItem {
+                text-align: center;
+                position: relative;
+                padding: 4rem 0rem;
 
-    .swiper-area {
-        margin-top: 4rem;
-        padding: 0rem 6rem;
-        position: relative;
-        @include breakpoint(lg) {
-            padding: 0rem 3rem;
-        }
-        .swiper {
-            position: inherit;
-            .swiper-slide {
-                cursor: pointer;
+                &:nth-child(2n + 0) .row {
+                    flex-direction: row-reverse;
+
+                    .swiper-area {
+                        &::before {
+                            display: none;
+                        }
+                        &::after {
+                            content: "";
+                            background: url(../../../public/image/shape2.png) no-repeat top;
+                            height: 100%;
+                            width: 70%;
+                            position: absolute;
+                            top: -5rem;
+                            right: calc(100% - 100rem);
+                            background-size: contain;
+                            background-position: right top;
+                            z-index: -1;
+                            @include breakpoint(xl) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .swiper-area {
+                    margin-top: 4rem;
+                    padding: 0rem 6rem;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        background: url(../../../public/image/shape.png) no-repeat top;
+                        height: 100%;
+                        width: 70%;
+                        position: absolute;
+                        top: -5rem;
+                        left: calc(100% - 100rem);
+                        background-size: contain;
+                        background-position: left top;
+                        z-index: -1;
+                        @include breakpoint(xl) {
+                            display: none;
+                        }
+                    }
+                    @include breakpoint(xl) {
+                        margin-top: 0;
+                    }
+
+                    .swiper {
+                        position: inherit;
+                        .swiper-slide {
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }
