@@ -41,7 +41,7 @@
             font-size: 1.0831rem;
             color: var(--text-color);
             font-weight: normal;
-            text-align: center;
+            text-align: left;
             max-width: 36rem;
             @include breakpoint(xl) {
                 font-size: 1rem;
@@ -65,7 +65,7 @@
                 li {
                     list-style-type: disc !important;
                     color: var(--text-color);
-                    font-weight: 300;
+                    font-weight: 600;
                     font-size: 1rem;
                     @include breakpoint(sm) {
                         font-size: 0.9rem;
@@ -93,7 +93,7 @@
                             height: 100%;
                             width: 70%;
                             position: absolute;
-                            top: -5rem;
+                            top: -2.5rem;
                             right: calc(100% - 100rem);
                             background-size: contain;
                             background-position: right top;

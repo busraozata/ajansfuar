@@ -2,7 +2,9 @@
 @import "../../styles/mixin.scss";
 
 header {
-    padding: 4rem 0rem !important;
+    padding: 4rem 0rem 2rem 0rem !important;
+    border-bottom: 1px solid var(--text-color) !important;
+    margin-bottom: 2rem !important;
     @include breakpoint(lg) {
         padding: 2rem 0rem !important;
     }

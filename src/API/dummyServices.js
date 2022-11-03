@@ -12,7 +12,7 @@ const dummyServices = [
         item: "Ort. 400 adet fotoğraf yüksek çözünürlüklü teslim edilir.",
       },
       {
-        item: "Seçilen 50 adet fotoğraf için retcuh ve color işlemi uygulanır.",
+        item: "Seçilen 50 adet fotoğraf için retouch ve color işlemi uygulanır.",
       },
       {
         item: "2 is gününde teslim.",
@@ -38,7 +38,7 @@ const dummyServices = [
     id: 2,
     image: "/image/service4.jpg",
     video: "https://www.youtube.com/watch?v=HVCnpFKZsXI",
-    title: "Fuar Tanıtımı Kısa Filmi",
+    title: "Fuar Tanıtım Filmi",
     text: "Fuar organizasyonunuzda standınız için gün boyu 1 videograph arkadaşımız bulunmaktadır. Öncelikle standınızın boş halini ve fuar alanındaki tüm önemli detaylardan kısa kısa görüntüler topluyoruz. Ardından standınızı en iyi gören açıdan timelpse sistemi ile görüntüler elde ediyoruz. Sonrasında standınızı ziyaret eden misafirleriniz ve iş ortaklarınız ile birlikte yapmış olduğunuz görüşmeler sırasında görüntüler topluyor ve bu görüntüleri kısa film haline getiriyoruz.",
     subStances: [
       {
