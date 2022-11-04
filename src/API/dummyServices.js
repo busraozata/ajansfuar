@@ -39,7 +39,7 @@ const dummyServices = [
     image: "/image/service4.jpg",
     video: "https://www.youtube.com/watch?v=HVCnpFKZsXI",
     title: "Fuar Tanıtım Filmi",
-    text: "Fuar organizasyonunuzda standınız için gün boyu 1 videograph arkadaşımız bulunmaktadır. Öncelikle standınızın boş halini ve fuar alanındaki tüm önemli detaylardan kısa kısa görüntüler topluyoruz. Ardından standınızı en iyi gören açıdan timelpse sistemi ile görüntüler elde ediyoruz. Sonrasında standınızı ziyaret eden misafirleriniz ve iş ortaklarınız ile birlikte yapmış olduğunuz görüşmeler sırasında görüntüler topluyor ve bu görüntüleri kısa film haline getiriyoruz.",
+    text: "Fuar organizasyonunuzda standınız için gün boyu 1 videograph arkadaşımız bulunmaktadır. Öncelikle standınızın boş halini ve fuar alanındaki tüm önemli detaylardan kısa kısa görüntüler topluyoruz. Ardından standınızı en iyi gören açıdan timelapse sistemi ile görüntüler elde ediyoruz. Sonrasında standınızı ziyaret eden misafirleriniz ve iş ortaklarınız ile birlikte yapmış olduğunuz görüşmeler sırasında görüntüler topluyor ve bu görüntüleri kısa film haline getiriyoruz.",
     subStances: [
       {
         item: "Ort. 5 saatlik bir video çekimi. (09:30-15:00)",
